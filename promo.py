@@ -115,7 +115,7 @@ else:
     st.markdown("---")
     
     st.markdown(
-        "<h3 style='text-align: center; font-family: Calibri;'>Твой промокод:
+        "<h3 style='text-align: center; font-family: Calibri;'>Твой промокод:"
         unsafe_allow_html=True
     )
     
