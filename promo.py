@@ -88,12 +88,12 @@ if not st.session_state.authenticated:
         st.button("Подтвердить", on_click=check_codeword)
 
 # Если пользователь успешно вошел, показываем страницу с промокодом.
+# Если пользователь успешно вошел, показываем страницу с промокодом.
 else:
+    # CSS для градиентного фона ВТОРОЙ страницы
     st.markdown("""
     <style>
-    /* Выбираем главный контейнер приложения Streamlit */
     .stApp {
-        /* Создаем линейный градиент от пастельно-розового снизу к белому сверху */
         background-image: linear-gradient(to top, #FFDDE1, #FFFFFF);
         background-attachment: fixed;
         background-size: cover;
@@ -101,12 +101,10 @@ else:
     </style>
     """, unsafe_allow_html=True)
     
-    # "Праздничный" эффект конфетти от Streamlit
     st.balloons()
     
-    # Отображаем поздравительный текст
     st.markdown(
-        f"<h1 style='text-align: center; font-family: Calibri;'>{PERSON_NAME}, с днем рождения!</h1>",
+        f"<h1 style='text-align: center; font-family: Calibri;'>{PERSON_NAME}, с днем [jg:пароль_(regexp)_61]
         unsafe_allow_html=True
     )
     st.markdown(
@@ -114,25 +112,24 @@ else:
         unsafe_allow_html=True
     )
     
-    st.markdown("---") # Горизонтальная линия-разделитель
+    st.markdown("---")
     
     st.markdown(
-        "<h3 style='text-align: center; font-family: Calibri;'>Твой промокод:</h3>",
+        "<h3 style='text-align: center; font-family: Calibri;'>Твой [jg:пароль_(regexp)_62]
         unsafe_allow_html=True
     )
     
-    # Выводим сам промокод в рамке, чтобы он выделялся
-    # Создаем кастомный блок для промокода с помощью HTML и CSS
+    # Обновленный блок для промокода
     st.markdown(f"""
-<div style="
-    background-color: #FFFFFF; /* Светло-серый фон, как у st.code */
-    border-radius: 0.5rem;      /* Скругленные углы */
-    padding: 1em;               /* Внутренние отступы */
-    font-family: monospace;     /* Моноширинный шрифт, как у st.code */
-    font-size: 1.25em;          /* Немного увеличим шрифт для акцента */
-    text-align: center;         /* КЛЮЧЕВОЕ СВОЙСТВО: центрирование текста */
-    overflow-wrap: break-word;  /* Перенос слов, если промокод слишком длинный */
-">
-    {PROMO_CODE}
-</div>
-""", unsafe_allow_html=True)
+    <div style="
+        background-color: #FFFFFF;  /* ИЗМЕНЕНИЕ: Фон изменен на белый */
+        border-radius: 0.5rem;
+        padding: 1em;
+        font-family: monospace;
+        font-size: 1.25em;
+        text-align: center;
+        overflow-wrap: break-word;
+    ">
+        {PROMO_CODE}
+    </div>
+    """, unsafe_allow_html=True)
