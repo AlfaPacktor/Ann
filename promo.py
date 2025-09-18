@@ -104,7 +104,7 @@ else:
     st.balloons()
     
     st.markdown(
-        f"<h1 style='text-align: center; font-family: Calibri;'>{PERSON_NAME}, с днем [jg:пароль_(regexp)_61]
+        f"<h1 style='text-align: center; font-family: Calibri;'>{PERSON_NAME}, с днем рождения!
         unsafe_allow_html=True
     )
     st.markdown(
@@ -115,7 +115,7 @@ else:
     st.markdown("---")
     
     st.markdown(
-        "<h3 style='text-align: center; font-family: Calibri;'>Твой [jg:пароль_(regexp)_62]
+        "<h3 style='text-align: center; font-family: Calibri;'>Твой промокод:
         unsafe_allow_html=True
     )
     
