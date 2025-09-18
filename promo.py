@@ -48,13 +48,22 @@ if 'authenticated' not in st.session_state:
 
 # --- Функция для проверки кодового слова ---
 def check_codeword():
-    """Проверяет введенное слово и меняет состояние, если оно верное."""
-    if st.session_state["codeword_input"] == SECRET_CODEWORD:
+    """
+    Безопасно проверяет введенное слово.
+    Использует .get() для предотвращения KeyError.
+    """
+    # .get() безопасно получает значение. Если ключа 'codeword_input' нет,
+    # он вернет пустую строку '' и не вызовет ошибку.
+    entered_code = st.session_state.get("codeword_input", "")
+    
+    if entered_code == SECRET_CODEWORD:
         st.session_state.authenticated = True
-        # Очищаем поле ввода после успешной аутентификации
-        del st.session_state["codeword_input"]
-    else:
+        # Удаляем ключ только если он существует, для чистоты
+        if "codeword_input" in st.session_state:
+            del st.session_state["codeword_input"]
+    elif entered_code != "": # Показываем ошибку только если что-то было введено
         st.error("Кодовое слово неверно")
+
 
 # --- Отрисовка страниц ---
 
