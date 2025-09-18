@@ -89,6 +89,18 @@ if not st.session_state.authenticated:
 
 # Если пользователь успешно вошел, показываем страницу с промокодом.
 else:
+    st.markdown("""
+    <style>
+    /* Выбираем главный контейнер приложения Streamlit */
+    .stApp {
+        /* Создаем линейный градиент от пастельно-розового снизу к белому сверху */
+        background-image: linear-gradient(to top, #FFDDE1, #FFFFFF);
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    
     # "Праздничный" эффект конфетти от Streamlit
     st.balloons()
     
