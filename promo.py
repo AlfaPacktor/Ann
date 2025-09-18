@@ -123,9 +123,9 @@ else:
     
     # Выводим сам промокод в рамке, чтобы он выделялся
     # Создаем кастомный блок для промокода с помощью HTML и CSS
-st.markdown(f"""
+    st.markdown(f"""
 <div style="
-    background-color: #f0f0f0; /* Светло-серый фон, как у st.code */
+    background-color: #FFFFFF; /* Светло-серый фон, как у st.code */
     border-radius: 0.5rem;      /* Скругленные углы */
     padding: 1em;               /* Внутренние отступы */
     font-family: monospace;     /* Моноширинный шрифт, как у st.code */
